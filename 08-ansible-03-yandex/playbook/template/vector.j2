@@ -1,1 +1,19 @@
-{{ vector_config | to_nice_yaml }}
+---
+  vector_config:
+    sources: 
+      sample_file:
+        type: file
+        read_from: beginning
+        ignore_older_secs: 600
+          include:
+            - /home/ols/logs/**/*.log
+    sinks:
+      to_clickhouse:
+        type: clickhouse
+        inputs:
+          - sample_file
+        endpoint: 158.160.66.31:8123
+        databases: logs
+        table: my_table
+        skip_unknown_fields: true
+        compression: gzip

@@ -2,15 +2,15 @@
 lighthouse:
   hosts:
     lighthouse-01:
-      ansible_host:
-      ansible_user:
+      ansible_host: 158.160.0.131
+      ansible_user: ols
 clickhouse:
   hosts:
     clickhouse-01:
-      ansible_host:
-      ansible_user:
+      ansible_host: 158.160.66.31
+      ansible_user: ols
 vector:
   hosts:
     vector-01:
-      ansible_host:
-      ansible_user:
+      ansible_host: 158.160.15.184
+      ansible_user: ols
